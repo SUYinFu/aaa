@@ -211,7 +211,6 @@ class UserInputField(Container):
 def main(page: Page):
     page.horizontal_alignment = "center"
     page.vertical_alignment = "center"
-    page.padding = padding.only(right=50)
     page.bgcolor = "#212328"
 
     def animate_boxes():
