@@ -339,4 +339,4 @@ def main(page: Page):
 
 
 if __name__ == "__main__":
-    flet.app(target=main)
+    flet.app(target=main,assets_dir='assets')
