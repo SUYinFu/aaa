@@ -1,0 +1,29 @@
+[project]
+name = "fletyolo"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+
+dependencies = [
+  "torch>=2.5.1",
+  "torchvision>=0.20.1",
+  "numpy>1.24.4",
+  "flet[all]>=0.25.2",
+  "ultralytics>=8.3.23",
+  "onnxruntime-gpu>=1.20.1",
+  "dill>=0.3.9",
+]
+
+[tool.uv.sources]
+torch = [
+  { index = "pytorch-cu124", marker = "platform_system == 'Windows'" }
+]
+torchvision = [
+  { index = "pytorch-cu124", marker = "platform_system == 'Windows'" }
+]
+
+[[tool.uv.index]]
+name = "pytorch-cu124"
+url = "https://download.pytorch.org/whl/cu124"
+explicit = true
